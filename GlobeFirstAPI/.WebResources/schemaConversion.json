@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/GlobeFirstAPI/Service Descriptors/globefirstapi.TopUpRecharge-Resource.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.com/namespaces/tns/1555385897796"
+}]}

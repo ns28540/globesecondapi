@@ -1,0 +1,67 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/topuprecharge" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-resource",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/TopUpRechargeRequest"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a TopUpRechargeResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/TopUpRechargeResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "TopUpRechargeRequest" : {
+      "type" : "object",
+      "required" : [ "MSISDN" ],
+      "properties" : {
+        "MSISDN" : {
+          "type" : "string"
+        },
+        "Amount" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "TopUpRechargeResponse" : {
+      "type" : "object",
+      "properties" : {
+        "SubscriberID" : {
+          "type" : "string"
+        },
+        "TransactionID" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

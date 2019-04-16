@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.com/namespaces/tns/1555385897796" xmlns:tns="http://www.example.org/wsdl/1555405510104" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TopUpRechargeSOAP" targetNamespace="http://www.example.org/wsdl/1555405510104">
+  <wsdl:import namespace="http://www.example.com/namespaces/tns/1555385897796"/>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://www.example.org/wsdl/1555405510104">
+            <xsd:import namespace="http://www.example.com/namespaces/tns/1555385897796"></xsd:import>
+            <xsd:element name="TopUpRechargeRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="extns:TopUpRechargeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="TopUpRechargeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="extns:TopUpRechargeResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TopUpRechargeRequest">
+    <wsdl:part element="tns:TopUpRechargeRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="TopUpRechargeResponse">
+    <wsdl:part element="tns:TopUpRechargeResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="TopUpRechargeSOAP">
+    <wsdl:operation name="TopUpRecharge">
+      <wsdl:input message="tns:TopUpRechargeRequest" name="TopUpRechargeInput"/>
+      <wsdl:output message="tns:TopUpRechargeResponse" name="TopUpRechargeOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

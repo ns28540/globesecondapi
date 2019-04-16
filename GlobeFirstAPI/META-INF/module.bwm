@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_uhctQF_4EemZNPm4it_Bng" targetNamespace="http://tns.tibco.com/bw/composite/GlobeFirstAPI" name="GlobeFirstAPI" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_qSNQMF_5EemZNPm4it_Bng" name="resource" promote="ComponentTopUpRecharge/resource">
+    <sca:interface.wsdl xmi:id="_qSYPUF_5EemZNPm4it_Bng" interface="http://xmlns.example.com/20190416091229PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/globefirstapi/TopUpRecharge.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_qSlDoF_5EemZNPm4it_Bng" name="RestService" path="/topuprecharge" docBasePath="http://localhost:7777/GlobeFirstAPI" docResourcePath="Resource" basePath="/" connector="globefirstapi.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/globefirstapi.TopUpRecharge-Resource.json">
+      <operation xmi:id="_qSqjMF_5EemZNPm4it_Bng" operationName="post" nickname="post-resource" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_qSoG8F_5EemZNPm4it_Bng" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_qSqjMV_5EemZNPm4it_Bng" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_uv1HgF_4EemZNPm4it_Bng" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uv9qYF_4EemZNPm4it_Bng" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uv-4gF_4EemZNPm4it_Bng" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uwAGoF_4EemZNPm4it_Bng" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uwBUwF_4EemZNPm4it_Bng" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_uwCi4F_4EemZNPm4it_Bng" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_uwEYEF_4EemZNPm4it_Bng" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_qR_00F_5EemZNPm4it_Bng" name="ComponentTopUpRecharge" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_qSBC8F_5EemZNPm4it_Bng" processName="globefirstapi.TopUpRecharge"/>
+    <sca:service xmi:id="_qSIXsF_5EemZNPm4it_Bng" name="resource">
+      <sca:interface.wsdl xmi:id="_qSI-wF_5EemZNPm4it_Bng" interface="http://xmlns.example.com/20190416091229PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/globefirstapi/TopUpRecharge.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
